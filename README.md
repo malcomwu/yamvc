@@ -9,15 +9,13 @@ import BaseModel from 'yamvc/BaseModel'
 var data = {
   firstName: 'John',
   lastName: 'Smith',
-  name: {
-    get() {
-      return this.firstName + ' ' + this.lastName
-    },
-    set(name) {
-      let names = name.split(' ')
-      this.firstName = names[0]
-      this.lastName = names[1]
-    }
+  get name() {
+    return this.firstName + ' ' + this.lastName
+  },
+  set name(n) {
+    let names = n.split(' ')
+    this.firstName = names[0]
+    this.lastName = names[1]
   },
   sex: 'male',
   age: 35,
