@@ -1,8 +1,17 @@
 
 export default class BaseModel {
-  constructor(a?, b?) {
+  constructor(data, b) {
     this.name = 'base-model'
-    this.a? = a?
-    this.b? = b?
+    this.data = data
+    this.b = b  // ??
+  }
+
+  toString() {
+    return 'To be described..'
+  }
+
+  toJSON() {
+    const { name, data } = this
+    return { name, data }
   }
 }
