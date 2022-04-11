@@ -2,7 +2,7 @@
 export default class BaseController {
   constructor(properties, b) {
     this.name = 'base-controller'
-    this.properties = parameters
+    this.properties = properties
     this.b = b  // ??
   }
 
