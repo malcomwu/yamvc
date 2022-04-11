@@ -17,7 +17,7 @@ var data = {
     this.firstName = names[0]
     this.lastName = names[1]
   },
-  sex: 'male',
+  sex: 'male',  // or gender
   age: 35,
   nationality: 'USA'
 }
