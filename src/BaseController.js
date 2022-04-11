@@ -1,9 +1,8 @@
 
 export default class BaseController {
-  constructor(properties, b) {
+  constructor(properties) {
     this.name = 'base-controller'
     this.properties = properties
-    this.b = b  // ??
   }
 
   toString() {
