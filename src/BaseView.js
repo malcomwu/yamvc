@@ -1,8 +1,8 @@
 
 export default class BaseView {
-  constructor(a, b) {
+  constructor(points, b) {
     this.name = 'base-view'
-    this.a = a  // ??
+    this.points = points
     this.b = b  // ??
   }
 
@@ -11,7 +11,7 @@ export default class BaseView {
   }
 
   toJSON() {
-    const { name } = this
-    return { name }
+    const { name, points } = this
+    return { name, points }
   }
 }
