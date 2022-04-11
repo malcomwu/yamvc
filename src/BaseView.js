@@ -1,9 +1,8 @@
 
 export default class BaseView {
-  constructor(points, b) {
+  constructor(points) {
     this.name = 'base-view'
     this.points = points
-    this.b = b  // ??
   }
 
   toString() {
