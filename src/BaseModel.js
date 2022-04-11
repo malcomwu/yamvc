@@ -1,9 +1,8 @@
 
 export default class BaseModel {
-  constructor(data, b) {
+  constructor(data) {
     this.name = 'base-model'
     this.data = data
-    this.b = b  // ??
   }
 
   toString() {
