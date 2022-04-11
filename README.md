@@ -5,6 +5,25 @@ This is yet another model view controller (YaMVC).
 **Model**
 ```js
 import BaseModel from 'yamvc/BaseModel'
+
+var data = {
+  firstName: 'John',
+  lastName: 'Smith',
+  name: {
+    get() {
+      return this.firstName + ' ' + this.lastName
+    },
+    set(name) {
+      let names = name.split(' ')
+      this.firstName = names[0]
+      this.lastName = names[1]
+    }
+  },
+  sex: 'male',
+  age: 35,
+  nationality: 'USA'
+}
+
 export default class PersonModel extends BaseModel {
   constructor(data, ?) {
     super(data, ?)
