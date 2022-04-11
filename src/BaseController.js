@@ -1,8 +1,8 @@
 
 export default class BaseController {
-  constructor(parameters, b) {
+  constructor(properties, b) {
     this.name = 'base-controller'
-    this.parameters = parameters
+    this.properties = parameters
     this.b = b  // ??
   }
 
@@ -11,7 +11,7 @@ export default class BaseController {
   }
 
   toJSON() {
-    const { name, parameters } = this
-    return { name, parameters }
+    const { name, properties } = this
+    return { name, properties }
   }
 }
