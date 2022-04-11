@@ -34,8 +34,8 @@ export default class PersonModel extends BaseModel {
 ```js
 import BaseView from 'yamvc/BaseView'
 export default class ??View extends BaseView {
-  constructor(?, ?) {
-    super(?, ?)
+  constructor(points, ?) {
+    super(points, ?)
     this.name = '??-view'
   }
 }
