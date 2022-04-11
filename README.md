@@ -23,8 +23,8 @@ var data = {
 }
 
 export default class PersonModel extends BaseModel {
-  constructor(data, ?) {
-    super(data, ?)
+  constructor(data) {
+    super(data)
     this.name = 'person-model'
   }
 }
@@ -33,10 +33,10 @@ export default class PersonModel extends BaseModel {
 **View**
 ```js
 import BaseView from 'yamvc/BaseView'
-export default class ??View extends BaseView {
-  constructor(points, ?) {
-    super(points, ?)
-    this.name = '??-view'
+export default class TheNameView extends BaseView {
+  constructor(points) {
+    super(points)
+    this.name = 'the-name-view'
   }
 }
 ```
@@ -44,10 +44,10 @@ export default class ??View extends BaseView {
 **Controller**
 ```js
 import BaseController from 'yamvc/BaseController'
-export default class ??Controller extends BaseController {
-  constructor(properties, ?) {
-    super(properties, ?)
-    this.name = '??-controller'
+export default class TheNameController extends BaseController {
+  constructor(properties) {
+    super(properties)
+    this.name = 'the-name-controller'
   }
 }
 ```
