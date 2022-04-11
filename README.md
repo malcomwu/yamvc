@@ -6,8 +6,8 @@ This is yet another model view controller (YaMVC).
 ```js
 import BaseModel from 'yamvc/BaseModel'
 export default class PersonModel extends BaseModel {
-  constructor(?, ?) {
-    super(?, ?)
+  constructor(data, ?) {
+    super(data, ?)
     this.name = 'person-model'
   }
 }
