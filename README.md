@@ -55,6 +55,7 @@ export default class ??Controller extends BaseController {
 ```
 
 ## Development
+**Install**
 ```sh
 git clone 'https://github.com/malcomwu/yamvc.git'
 ```
