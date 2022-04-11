@@ -45,8 +45,8 @@ export default class ??View extends BaseView {
 ```js
 import BaseController from 'yamvc/BaseController'
 export default class ??Controller extends BaseController {
-  constructor(parameters, ?) {
-    super(parameters, ?)
+  constructor(properties, ?) {
+    super(properties, ?)
     this.name = '??-controller'
   }
 }
