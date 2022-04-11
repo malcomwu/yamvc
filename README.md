@@ -1,4 +1,4 @@
-# YaMVC 0.1.0 (Draft)
+# YaMVC 0.1.0
 This is yet another model view controller (YaMVC).
 
 ## Usage
