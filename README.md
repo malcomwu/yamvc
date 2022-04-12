@@ -1,7 +1,8 @@
 # YaMVC 0.1.0
 This is yet another model view controller (YaMVC).
 
-It is a *draft* of the design blueprint of YaMVC, which is not implemented yet.
+It is a *draft* of the design blueprint of YaMVC, in which the features
+are not implemented yet.
 
 ## Usage
 **Install**<br>
@@ -12,7 +13,7 @@ mkdir my_repo_name
 cd my_repo_name
 git init
 npm init
-npm install yamvc --save-dev  # not implemented yet
+npm install yamvc --save-dev  # not published yet
 ```
 
 (Sketch)
