@@ -4,7 +4,7 @@ const hasDoubleQuote = str => str.test(/'/)
 
 
 export class Element {
-  constructor(tagName = 'div', attributes = {}, content = [],
+  constructor(tagName = 'br', attributes = {}, content = [],
               indent = 2, level = 0) {
     this.name = 'element'
     this.tagName = tagName
