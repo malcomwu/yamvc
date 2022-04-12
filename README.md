@@ -1,7 +1,22 @@
 # YaMVC 0.1.0
 This is yet another model view controller (YaMVC).
 
+It is a *draft* of the design blueprint of YaMVC, which is not implemented yet.
+
 ## Usage
+**Install**<br>
+For the beginners,
+```sh
+cd ~/Development
+mkdir my_repo_name
+cd my_repo_name
+git init
+npm init
+npm install yamvc --save-dev  # not implemented yet
+```
+
+(Sketch)
+
 **Model**
 ```js
 import BaseModel from 'yamvc/BaseModel'
@@ -33,10 +48,10 @@ export default class PersonModel extends BaseModel {
 **View**
 ```js
 import BaseView from 'yamvc/BaseView'
-export default class TheNameView extends BaseView {
+export default class PoliceOfficView extends BaseView {
   constructor(points) {
     super(points)
-    this.name = 'the-name-view'
+    this.name = 'police-office-view'
   }
 }
 ```
@@ -44,10 +59,10 @@ export default class TheNameView extends BaseView {
 **Controller**
 ```js
 import BaseController from 'yamvc/BaseController'
-export default class TheNameController extends BaseController {
+export default class TrafficController extends BaseController {
   constructor(properties) {
     super(properties)
-    this.name = 'the-name-controller'
+    this.name = 'traffic-controller'
   }
 }
 ```
