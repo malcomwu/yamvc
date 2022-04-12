@@ -1,5 +1,6 @@
 
-/* Adapted from Underscore.js */
+/* Adapted from Underscore.js
+   https://underscorejs.org/docs/underscore-esm.html */
 export const debounce = (func, wait) => {
   let timeout, previous, args, result, context
 
