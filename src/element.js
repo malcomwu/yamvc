@@ -47,8 +47,8 @@ export class Element {
   }
 
   toJSON() {
-    const { name, tagName, attributes, content }
-    return { name, tagName, attributes, content }
+    const { name, tagName, attributes, content, indent, level }
+    return { name, tagName, attributes, content, indent, level }
   }
 }
 
