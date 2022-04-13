@@ -1,5 +1,6 @@
 
 /* Helpers */
+const spaces = num => new Array(num + 1).join(' ')
 const hasDoubleQuote = str => str.test(/'/)
 
 
@@ -76,8 +77,32 @@ export class Attributes {
   }
 }
 
-export default function element(name, attributes, content) {
+/**
+ * Usage
+ * element(tagName'', attributes{}, content[]|''|..!{})
+ * element(tagName'', attributes{})  // void
+ * element(tagName'', content[]|''|..!{})
+ * element(tagName'')  // '<tag-name>' (void)
+ * element()  // '<br>' (void)
+ **/
+export default function element(tagName, attributes, content) {
+  if (typeof content === 'undefined') {
+    if (typeof attributes === 'undefined') {
+      attributes = {}
+    } else if (Array.isArray(attributes)) {
+      content = attributes
+      attributes = {}
+    } else if (typeof attributes !== 'object') {
+      content = [attributes]
+      attributes = {}
+    } else {
+      content = []
+    }
+  } else if (!Array.isArray(content)) {
+    content = [content]
+  }
+
   return {
-    name, attributes, content 
+    tagName, attributes, content 
   }
 }
