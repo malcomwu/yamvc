@@ -1,3 +1,4 @@
+import BaseComponent from './BaseComponent'
 
 /* Helpers */
 const spaces = num => new Array(num + 1).join(' ')
@@ -30,8 +31,8 @@ export class Element {
       content.forEach(child => {
         if (child instanceof Element) {
           // Todo..
-        } else if (false /* is component */) {
-          // To be considered..
+        } else if (child instanceof BaseComponent) {
+          // Todo..
         } else {
           strs.push('' + child)
         }
@@ -102,7 +103,5 @@ export default function element(tagName, attributes, content) {
     content = [content]
   }
 
-  return {
-    tagName, attributes, content 
-  }
+  return new Element(tagName, attributes, content)
 }
