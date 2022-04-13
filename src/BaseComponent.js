@@ -1,7 +1,8 @@
 
 export default class BaseComponent {
-  constructor(..) {
+  constructor(properties /* ?.. */) {
     this.name = 'base-component'
+    this.properties = properties 
   }
 
   toString() {
@@ -9,7 +10,7 @@ export default class BaseComponent {
   }
 
   toJSON() {
-    const { name } = this
-    return { name }
+    const { name, properties } = this
+    return { name, properties }
   }
 }
