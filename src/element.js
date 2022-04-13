@@ -12,8 +12,8 @@ export class Element {
     this.tagName = tagName
     this.attributes = attributes 
     this.content = content
-    this.indent = 2
-    this.level = 0
+    this.indent = indent
+    this.level = level
   }
 
   toString() {
