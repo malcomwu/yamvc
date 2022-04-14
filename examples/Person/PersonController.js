@@ -39,5 +39,7 @@ export default class PersonController extends BaseController {
   constructor(properties) {
     super(properties)
     this.name = 'person-controller'
+    // this.model = model
+    // this.view = view
   }
 }
