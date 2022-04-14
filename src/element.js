@@ -7,17 +7,19 @@ const hasDoubleQuote = str => str.test(/'/)
 
 export class Element {
   constructor(tagName = 'br', attributes = {}, content = [],
-              indent = 2, level = 0) {
+              indent = 2, level = 0, parent = null, index = 0) {
     this.name = 'element'
     this.tagName = tagName
     this.attributes = attributes 
     this.content = content
     this.indent = indent
     this.level = level
+    this.parent = parent  //
+    this.index = index    // for traversing purposes
   }
 
   toString() {
-    const { tagName, attributes, content } = this
+    const { tagName, attributes, content, indent, level } = this
     let strs = []
 
     // Begin tag
@@ -30,7 +32,7 @@ export class Element {
     if (content.length) {
       content.forEach(child => {
         if (child instanceof Element) {
-          // Todo..
+          strs.push('\n', spaces(indent * level), child)
         } else if (child instanceof BaseComponent) {
           // Todo..
         } else {
@@ -39,7 +41,7 @@ export class Element {
       })
 
       // End tag
-      str.push('</' + tagName + '>')
+      strs.push('</' + tagName + '>')
     }
     // else Void
 
@@ -47,13 +49,13 @@ export class Element {
   }
 
   toJSON() {
-    const { name, tagName, attributes, content, indent, level }
+    const { name, tagName, attributes, content, indent, level } = this
     return { name, tagName, attributes, content, indent, level }
   }
 }
 
 export class Attributes {
-  constructor(value) {
+  constructor(value = {}) {
     this.name = 'attributes'
     this.value = value 
   }

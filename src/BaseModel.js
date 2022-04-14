@@ -25,8 +25,16 @@ export default class BaseModel {
     this.data = data
   }
 
-  get data() { return this._data }
-  set data() { this._data = new Data(data, this) }
+  // get data() { return this._data }
+  // set data() { this._data = new Data(data, this) }
+
+  // get(name) {
+
+  // }
+
+  // set(name) {
+
+  // }
 
   toString() {
     return 'To be described..'
